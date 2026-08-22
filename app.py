@@ -54,7 +54,7 @@ div[data-testid="stSidebar"] h3 {
 </style>
 """, unsafe_allow_html=True)
 
-pipe = pickle.load(open("pipe.pkl","rb"))
+#pipe = pickle.load(open("pipe.pkl","rb"))
 df=pd.read_csv("cleaned-home-data.csv")
 
 st.title("🏠 House Price Prediction App")
