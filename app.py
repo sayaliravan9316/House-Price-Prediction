@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import pickle
 
-
+pipe = pickle.load(open("pipe.pkl",'rb'))
 st.set_page_config(
     page_title="House Price Prediction",
     page_icon="🏠",
@@ -54,7 +54,7 @@ div[data-testid="stSidebar"] h3 {
 
 </style>
 """, unsafe_allow_html=True)
-pipe = pickle.load(open("pipe.pkl","rb"))
+#pipe = pickle.load(open("pipe.pkl","rb"))
 df=pd.read_csv("cleaned-home-data.csv")
 st.title("🏠 House Price Prediction App")
 
