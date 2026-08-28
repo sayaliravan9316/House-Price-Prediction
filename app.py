@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
-import os
 
 st.set_page_config(
     page_title="House Price Prediction",
@@ -10,14 +9,7 @@ st.set_page_config(
     layout="wide"
 )
 
-if not os.path.exists("pipe.pkl"):
-    st.error("pipe.pkl file not found!")
-    st.stop()
-
-with open("pipe.pkl", "rb") as file:
-    pipe = pickle.load(file)
-
-#pipe = pickle.load(open("pipe.pkl",'rb'))
+pipe = pickle.load(open("pipe.pkl",'rb'))
 st.set_page_config(
     page_title="House Price Prediction",
     page_icon="🏠",
